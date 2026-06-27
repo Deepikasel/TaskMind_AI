@@ -1,0 +1,90 @@
+
+.about-page {
+  min-height: 100vh;
+  background: #0b1220;
+  color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== subtle animated glow (AI/productivity feel) ===== */
+.bg-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(34,211,238,0.18), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(99,102,241,0.15), transparent 50%);
+  filter: blur(60px);
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* HEADER */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.about-header p {
+  max-width: 750px;
+  margin: auto;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 22px;
+  backdrop-filter: blur(12px);
+  transition: 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34,211,238,0.4);
+}
+
+.about-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.about-footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

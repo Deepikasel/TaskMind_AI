@@ -1,0 +1,42 @@
+@import "./variables.css";
+@import "./theme.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+
+  color: var(--text-color);
+
+  font-family: "Segoe UI", sans-serif;
+
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section {
+  padding: 80px 0;
+}

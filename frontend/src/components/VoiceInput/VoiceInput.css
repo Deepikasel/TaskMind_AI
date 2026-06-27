@@ -1,0 +1,51 @@
+.voice-box{
+    margin-top:20px;
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    background:#fafafa;
+}
+
+.voice-buttons{
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.voice-start,
+.voice-stop{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+}
+
+.voice-start{
+    background:#2563eb;
+    color:white;
+}
+
+.voice-stop{
+    background:#ef4444;
+    color:white;
+}
+
+.voice-transcript{
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    min-height:80px;
+    margin-bottom:10px;
+}
+
+.voice-transcript h4{
+    margin-bottom:10px;
+}
+
+.voice-status{
+    font-weight:bold;
+}

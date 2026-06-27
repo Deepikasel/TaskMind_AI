@@ -1,0 +1,73 @@
+.summary-page {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.summary-header {
+  margin-bottom: 30px;
+}
+
+.summary-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.summary-header p {
+  color: #64748b;
+}
+
+.score-card,
+.summary-card,
+.insights-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 25px;
+}
+
+.score-card {
+  text-align: center;
+}
+
+.score-circle {
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  font-weight: bold;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #06b6d4
+    );
+}
+
+.summary-card p {
+  line-height: 1.8;
+}
+
+.insights-card ul {
+  padding-left: 20px;
+}
+
+.insights-card li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}

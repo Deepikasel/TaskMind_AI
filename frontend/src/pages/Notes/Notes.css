@@ -1,0 +1,55 @@
+.notes-page {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+}
+
+.add-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  resize: none;
+}
+
+.save-btn {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.save-btn:hover {
+  opacity: 0.9;
+}
