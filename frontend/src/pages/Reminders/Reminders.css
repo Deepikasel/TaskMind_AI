@@ -1,6 +1,4 @@
-/* =======================
-   PAGE LAYOUT
-======================= */
+
 .reminders-page {
   padding: 40px;
   max-width: 900px;
@@ -14,9 +12,7 @@
   color: #222;
 }
 
-/* =======================
-   FORM
-======================= */
+
 .reminder-form {
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +40,6 @@
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
 }
 
-/* Voice button wrapper (from VoiceInput component) */
 .reminder-form button {
   padding: 10px 14px;
   cursor: pointer;
@@ -60,9 +55,7 @@
   background: #4338ca;
 }
 
-/* =======================
-   REMINDER CARD
-======================= */
+
 .reminder-card {
   background: #ffffff;
   border: 1px solid #eee;
@@ -89,9 +82,7 @@
   font-size: 14px;
 }
 
-/* =======================
-   STATUS BADGE
-======================= */
+
 .reminder-card p:nth-child(3) {
   display: inline-block;
   padding: 3px 10px;
@@ -101,9 +92,7 @@
   color: #333;
 }
 
-/* =======================
-   BUTTONS
-======================= */
+
 .btn-group {
   margin-top: 12px;
   display: flex;
@@ -119,7 +108,7 @@
   transition: 0.2s;
 }
 
-/* Complete */
+
 .btn-group button:nth-child(1) {
   background: #10b981;
   color: white;
@@ -129,7 +118,7 @@
   background: #059669;
 }
 
-/* Edit */
+
 .btn-group button:nth-child(2) {
   background: #f59e0b;
   color: white;
@@ -139,7 +128,7 @@
   background: #d97706;
 }
 
-/* Delete */
+
 .btn-group button:nth-child(3) {
   background: #ef4444;
   color: white;

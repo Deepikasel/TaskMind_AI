@@ -2,11 +2,7 @@ const { generateTags, summarizeContent, categorizeText } = require("../services/
 const { parseTask } = require("../services/taskParserService");
 const { generateDailySummary } = require("../services/summaryService");
 
-/*
-=====================================================
-SAFE ERROR WRAPPER
-=====================================================
-*/
+
 const safe = (fn) => async (req, res) => {
   try {
     await fn(req, res);
@@ -20,11 +16,7 @@ const safe = (fn) => async (req, res) => {
   }
 };
 
-/*
-=====================================================
-Generate AI Tags
-=====================================================
-*/
+
 exports.generateAITags = safe(async (req, res) => {
   const { text } = req.body;
 
@@ -46,11 +38,7 @@ exports.generateAITags = safe(async (req, res) => {
   });
 });
 
-/*
-=====================================================
-AI Category
-=====================================================
-*/
+
 exports.generateCategory = safe(async (req, res) => {
   const { text } = req.body;
 
@@ -72,11 +60,7 @@ exports.generateCategory = safe(async (req, res) => {
   });
 });
 
-/*
-=====================================================
-AI Summary
-=====================================================
-*/
+
 exports.generateSummary = safe(async (req, res) => {
   const { text } = req.body;
 
@@ -102,11 +86,7 @@ exports.generateSummary = safe(async (req, res) => {
 });
 });
 
-/*
-=====================================================
-TASK PARSER (MAIN FIX AREA)
-=====================================================
-*/
+
 exports.parseNaturalTask = safe(async (req, res) => {
   const { text } = req.body;
 
@@ -125,11 +105,7 @@ exports.parseNaturalTask = safe(async (req, res) => {
   });
 });
 
-/*
-=====================================================
-Daily Summary
-=====================================================
-*/
+
 exports.dailySummary = safe(async (req, res) => {
   const summary = await generateDailySummary(req.user.id);
 
@@ -139,26 +115,6 @@ exports.dailySummary = safe(async (req, res) => {
   });
 });
 
-/*
-=====================================================
-Suggestions
-=====================================================
-*/
-/* exports.productivitySuggestions = safe(async (req, res) => {
-  const { generateContent } = require("../services/geminiService");
-
-  const prompt = `
-Generate 5 productivity tips.
-Return one per line.
-`;
-
-  const suggestions = await generateContent(prompt);
-
-  res.json({
-    success: true,
-    data: suggestions,
-  });
-}); */
 
 exports.productivitySuggestions = safe(async (req, res) => {
   const prompt = `

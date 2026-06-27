@@ -1,4 +1,3 @@
-// src/context/AuthContext.js
 
 import { createContext, useState } from "react";
 

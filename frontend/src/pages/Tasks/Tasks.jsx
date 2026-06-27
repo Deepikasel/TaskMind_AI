@@ -37,7 +37,6 @@ function Tasks() {
     tags: [],
   });
 
-  // LOAD TASKS FROM DB
   useEffect(() => {
     const fetchTasks = async () => {
       try {
@@ -51,7 +50,7 @@ function Tasks() {
     fetchTasks();
   }, []);
 
-  // VOICE AUTO PARSE
+
   useEffect(() => {
     if (!transcript) return;
     analyzeTask(transcript);
@@ -90,7 +89,7 @@ function Tasks() {
     }
   };
 
-  // CREATE / UPDATE TASK
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -127,7 +126,7 @@ function Tasks() {
     setIsOpen(false);
   };
 
-  // DELETE TASK
+  
   const handleDelete = async (id) => {
     try {
       await deleteTask(id);
@@ -137,7 +136,7 @@ function Tasks() {
     }
   };
 
-  // COMPLETE TASK
+ 
   const handleComplete = async (id) => {
     try {
       const res = await completeTask(id);
@@ -150,7 +149,7 @@ function Tasks() {
     }
   };
 
-  // EDIT TASK
+  
   const handleEdit = (task) => {
     setFormData(task);
     setEditingId(task._id);

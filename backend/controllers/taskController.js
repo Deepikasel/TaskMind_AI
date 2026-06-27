@@ -1,11 +1,5 @@
 const Task = require("../models/Task");
 
-/*
-==========================================
-Create Task
-POST /api/tasks
-==========================================
-*/
 
 exports.createTask = async (req, res) => {
   try {
@@ -47,12 +41,7 @@ exports.createTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get All Tasks
-GET /api/tasks
-==========================================
-*/
+
 
 exports.getTasks = async (req, res) => {
   try {
@@ -123,12 +112,7 @@ exports.getTasks = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get Single Task
-GET /api/tasks/:id
-==========================================
-*/
+
 
 exports.getTask = async (req, res) => {
   try {
@@ -156,12 +140,7 @@ exports.getTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Update Task
-PUT /api/tasks/:id
-==========================================
-*/
+
 
 exports.updateTask = async (req, res) => {
   try {
@@ -196,12 +175,7 @@ exports.updateTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Mark Complete
-PATCH /api/tasks/:id/complete
-==========================================
-*/
+
 
 exports.completeTask = async (req, res) => {
   try {
@@ -235,12 +209,7 @@ exports.completeTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Archive Task
-PATCH /api/tasks/:id/archive
-==========================================
-*/
+
 
 exports.archiveTask = async (req, res) => {
   try {
@@ -272,12 +241,7 @@ exports.archiveTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Delete Task
-DELETE /api/tasks/:id
-==========================================
-*/
+
 
 exports.deleteTask = async (req, res) => {
   try {
@@ -307,12 +271,7 @@ exports.deleteTask = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Dashboard Statistics
-GET /api/tasks/stats
-==========================================
-*/
+
 
 exports.taskStats = async (req, res) => {
   try {

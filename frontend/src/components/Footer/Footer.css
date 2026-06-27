@@ -6,14 +6,12 @@
   font-weight: 500;
   letter-spacing: 0.3px;
 
-  /* ❌ remove gap */
   margin-top: 0;
 
   position: relative;
   overflow: hidden;
 }
 
-/* soft animated glow */
 .footer::before {
   content: "";
   position: absolute;

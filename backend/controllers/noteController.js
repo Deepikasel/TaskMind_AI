@@ -1,11 +1,5 @@
 const Note = require("../models/Note");
 
-/*
-==========================================
-Create Note
-POST /api/notes
-==========================================
-*/
 
 exports.createNote = async (req, res) => {
   try {
@@ -47,12 +41,7 @@ exports.createNote = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get All Notes
-GET /api/notes
-==========================================
-*/
+
 
 exports.getNotes = async (req, res) => {
   try {
@@ -120,12 +109,7 @@ exports.getNotes = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get Single Note
-GET /api/notes/:id
-==========================================
-*/
+
 
 exports.getNote = async (req, res) => {
   try {
@@ -153,12 +137,6 @@ exports.getNote = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Update Note
-PUT /api/notes/:id
-==========================================
-*/
 
 exports.updateNote = async (req, res) => {
   try {
@@ -193,12 +171,7 @@ exports.updateNote = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Favorite / Unfavorite Note
-PATCH /api/notes/:id/favorite
-==========================================
-*/
+
 
 exports.toggleFavorite = async (req, res) => {
   try {
@@ -233,12 +206,7 @@ exports.toggleFavorite = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Delete Note
-DELETE /api/notes/:id
-==========================================
-*/
+
 
 exports.deleteNote = async (req, res) => {
   try {
@@ -268,12 +236,7 @@ exports.deleteNote = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Note Statistics
-GET /api/notes/stats
-==========================================
-*/
+
 
 exports.noteStats = async (req, res) => {
   try {
@@ -318,12 +281,7 @@ exports.noteStats = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Recent Notes
-GET /api/notes/recent
-==========================================
-*/
+
 
 exports.recentNotes = async (req, res) => {
   try {

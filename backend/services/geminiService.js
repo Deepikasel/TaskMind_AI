@@ -6,11 +6,7 @@ const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-/*
-=====================================================
-SAFE CORE GENERATOR (NEW)
-=====================================================
-*/
+
 const generateContent = async (prompt, fallback = "") => {
   try {
     const result = await ai.models.generateContent({
@@ -26,11 +22,7 @@ const generateContent = async (prompt, fallback = "") => {
   }
 };
 
-/*
-=====================================================
-Generate Tags
-=====================================================
-*/
+
 const generateTags = async (text) => {
   const prompt = `
 Generate 5 short tags for the following text.
@@ -52,11 +44,6 @@ ${text}
   }
 };
 
-/*
-=====================================================
-Generate Category
-=====================================================
-*/
 const categorizeText = async (text) => {
   const prompt = `
 Choose ONE category.
@@ -74,11 +61,7 @@ ${text}
   return output.trim() || "Other";
 };
 
-/*
-=====================================================
-Generate Summary
-=====================================================
-*/
+
 const summarizeContent = async (text) => {
   const prompt = `
 Summarize in less than 50 words.
@@ -95,11 +78,7 @@ ${text}
   return output.trim();
 };
 
-/*
-=====================================================
-Parse Task AI (SAFE)
-=====================================================
-*/
+
 const parseTaskAI = async (text) => {
   const prompt = `
 Extract task JSON:

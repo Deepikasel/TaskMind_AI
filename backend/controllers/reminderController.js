@@ -1,11 +1,5 @@
 const Reminder = require("../models/Reminder");
 
-/*
-==========================================
-Create Reminder
-POST /api/reminders
-==========================================
-*/
 
 exports.createReminder = async (req, res) => {
   try {
@@ -49,12 +43,7 @@ exports.createReminder = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get All Reminders
-GET /api/reminders
-==========================================
-*/
+
 
 exports.getReminders = async (req, res) => {
   try {
@@ -124,12 +113,7 @@ exports.getReminders = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Get Single Reminder
-GET /api/reminders/:id
-==========================================
-*/
+
 
 exports.getReminder = async (req, res) => {
   try {
@@ -157,12 +141,7 @@ exports.getReminder = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Update Reminder
-PUT /api/reminders/:id
-==========================================
-*/
+
 
 exports.updateReminder = async (req, res) => {
   try {
@@ -197,12 +176,7 @@ exports.updateReminder = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Complete Reminder
-PATCH /api/reminders/:id/complete
-==========================================
-*/
+
 
 exports.completeReminder = async (req, res) => {
   try {
@@ -235,12 +209,7 @@ exports.completeReminder = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Delete Reminder
-DELETE /api/reminders/:id
-==========================================
-*/
+
 
 exports.deleteReminder = async (req, res) => {
   try {
@@ -270,12 +239,6 @@ exports.deleteReminder = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Today's Reminders
-GET /api/reminders/today
-==========================================
-*/
 
 exports.todayReminders = async (req, res) => {
   try {
@@ -306,12 +269,6 @@ exports.todayReminders = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Upcoming Reminders
-GET /api/reminders/upcoming
-==========================================
-*/
 
 exports.upcomingReminders = async (req, res) => {
   try {
@@ -339,12 +296,6 @@ exports.upcomingReminders = async (req, res) => {
   }
 };
 
-/*
-==========================================
-Reminder Statistics
-GET /api/reminders/stats
-==========================================
-*/
 
 exports.reminderStats = async (req, res) => {
   try {

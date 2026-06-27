@@ -1,129 +1,3 @@
-/* import { useEffect, useState } from "react";
-import "./Reminders.css";
-
-import {
-  getReminders,
-  createReminder,
-  completeReminder,
-  deleteReminder,
-} from "../../services/reminderService";
-
-function Reminders() {
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
-
-  const [reminders, setReminders] = useState([]);
-
-  const loadReminders = async () => {
-    try {
-      const res = await getReminders();
-
-      setReminders(res.data.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    loadReminders();
-  }, []);
-
-  const addReminder = async () => {
-    if (!title || !date) return;
-
-    await createReminder({
-      title,
-      reminderDate: date,
-    });
-
-    setTitle("");
-    setDate("");
-
-    loadReminders();
-  };
-
-  const complete = async (id) => {
-    await completeReminder(id);
-    loadReminders();
-  };
-
-  const remove = async (id) => {
-    await deleteReminder(id);
-    loadReminders();
-  };
-
-  return (
-    <div className="reminders-page">
-
-      <h1>Reminders</h1>
-
-      <div className="reminder-form">
-
-        <input
-          placeholder="Reminder"
-          value={title}
-          onChange={(e) =>
-            setTitle(e.target.value)
-          }
-        />
-
-        <input
-          type="date"
-          value={date}
-          onChange={(e) =>
-            setDate(e.target.value)
-          }
-        />
-
-        <button onClick={addReminder}>
-          Add Reminder
-        </button>
-
-      </div>
-
-      {reminders.map((item) => (
-
-        <div
-          className="reminder-card"
-          key={item._id}
-        >
-
-          <h3>{item.title}</h3>
-
-          <p>
-            {new Date(
-              item.reminderDate
-            ).toLocaleDateString()}
-          </p>
-
-          <p>{item.status}</p>
-
-          <button
-            onClick={() =>
-              complete(item._id)
-            }
-          >
-            Complete
-          </button>
-
-          <button
-            onClick={() =>
-              remove(item._id)
-            }
-          >
-            Delete
-          </button>
-
-        </div>
-
-      ))}
-    </div>
-  );
-}
-
-export default Reminders; */
-
-
 
 import { useEffect, useState } from "react";
 import "./Reminders.css";
@@ -156,9 +30,7 @@ function Reminders() {
 
   const [editId, setEditId] = useState(null);
 
-  // ======================
-  // LOAD REMINDERS
-  // ======================
+  
   const loadReminders = async () => {
     try {
       const res = await getReminders();
@@ -172,14 +44,12 @@ function Reminders() {
     loadReminders();
   }, []);
 
-  // ======================
-  // VOICE → AUTO FILL
-  // ======================
+ 
  useEffect(() => {
   if (!transcript) return;
 
   setFormData((prev) => {
-    // only update if user is currently not typing manually
+    
     if (prev.title && prev.title !== "") return prev;
 
     return {
@@ -188,9 +58,7 @@ function Reminders() {
     };
   });
 }, [transcript]);
-  // ======================
-  // HANDLE INPUT
-  // ======================
+ 
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -198,9 +66,7 @@ function Reminders() {
     });
   };
 
-  // ======================
-  // ADD / UPDATE REMINDER
-  // ======================
+  
   const saveReminder = async () => {
     if (!formData.title || !formData.date) return;
 
@@ -225,9 +91,7 @@ function Reminders() {
     }
   };
 
-  // ======================
-  // COMPLETE
-  // ======================
+  
   const complete = async (id) => {
     try {
       await completeReminder(id);
@@ -237,9 +101,7 @@ function Reminders() {
     }
   };
 
-  // ======================
-  // DELETE
-  // ======================
+  
   const remove = async (id) => {
     try {
       await deleteReminder(id);
@@ -249,9 +111,7 @@ function Reminders() {
     }
   };
 
-  // ======================
-  // EDIT (FILL FORM)
-  // ======================
+  
   const edit = (item) => {
     setFormData({
       title: item.title,
@@ -266,7 +126,7 @@ function Reminders() {
 
       <h1>Reminders</h1>
 
-      {/* ================= FORM ================= */}
+      
       <div className="reminder-form">
 
         <input
@@ -297,7 +157,7 @@ function Reminders() {
         </button>
       </div>
 
-      {/* ================= LIST ================= */}
+      
       {reminders.map((item) => (
         <div className="reminder-card" key={item._id}>
 

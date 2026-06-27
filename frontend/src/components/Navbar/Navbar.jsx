@@ -1,5 +1,4 @@
 
-// src/components/Navbar/Navbar.jsx
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -7,8 +6,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
-
-        {/* LOGO SECTION (CLICKABLE) */}
         <Link to="/" className="logo-container">
           <div className="logo-circle">
             TM
